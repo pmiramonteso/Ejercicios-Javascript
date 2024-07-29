@@ -57,3 +57,51 @@ console.log(parOImpar(2))
 console.log(parOImpar(9))
 
 //Callbacks
+
+function procesar(num, callback){
+    return callback(num);
+}
+console.log(procesar(5, (num) => num * num));
+
+function suma(a, b, callback) {
+    callback(a + b);
+}
+suma(4, 6, (resultado) => console.log(resultado));
+
+function aSaludar(nombre, callback) {
+    callback(nombre);
+}
+setTimeout(() => {
+    aSaludar('Paola', (nombre) => {
+        console.log('Hola, ' + nombre);
+    });
+}, 2000);
+
+function procesarElementos(artistas, callback) {
+    for (let i = 0; i < artistas.length; i++) {
+        callback(artistas[i]);
+    }
+}
+const artistas = ['SFDK', 'Ayax', 'Hard GZ']
+
+function imprimirArtistas(artistas) {
+    console.log(artistas);
+}
+procesarElementos(artistas, imprimirArtistas)
+
+function procesarCadena(cadena, callback) {
+    const cadenaMayus = cadena.toUpperCase();
+    callback(cadenaMayus);
+}
+let cadena = 'Yo tampoco sé vivir, estoy improvisando'
+function impirmirCadena(cadena) {
+    console.log(cadena);
+}
+procesarCadena(cadena, impirmirCadena)
+
+//Rest & Spread operators
+
+const artistas1 = ['Sharif', 'Mxrgxn', 'Recycled']
+const artistas2 = [...artistas1, 'FernandoCosta', 'KaseO', 'ToteKing']
+console.log(artistas2)
+
