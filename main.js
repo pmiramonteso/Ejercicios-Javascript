@@ -105,3 +105,52 @@ const artistas1 = ['Sharif', 'Mxrgxn', 'Recycled']
 const artistas2 = [...artistas1, 'FernandoCosta', 'KaseO', 'ToteKing']
 console.log(artistas2)
 
+function suma(...valores){
+let resultado = 0
+valores.forEach(function(valor){
+    resultado = resultado + valor;
+})
+return resultado;
+}
+console.log(suma(1, 2, 3, 4, 5))
+
+const objeto1 = {
+    instrumentos: 'piano, guitarra, bateria',
+    escenarios: 'CaldesDeMontbui, Luarca, RibesDeFreser'
+}
+const objeto2 = {
+    ...objeto1
+}
+objeto2.escenarios = 'Aiguafreda'
+console.log(objeto1);
+console.log(objeto2);
+
+const raperosUruguayos = ['DosTresCinco', 'Zeballos', 'DiegoArquero', 'GamaStoner'];
+const [primero, segundo, ...resto] = raperosUruguayos;
+console.log(primero);
+console.log(segundo);
+console.log(resto);
+
+function crearRecetas(a, b, c) {
+    return (a + ', ' + b + ' y ' + c)
+}
+const ingredientes = ['pistacho', 'fresas', 'nata']
+
+console.log(crearRecetas(...ingredientes))
+
+const caminosASantiago = {
+    nombres : ['Portugues', 'delNorte', 'Primitivo'],
+    caracteristicas : ['costa', 'montaña', 'ciudad'],
+    etapas: ['+10km', '+20km', '+30km', '+40km']
+}
+const clima = {
+    estacion : ['Invierno', 'Primavera', 'Verano', 'Otono'],
+    caracteristicas : ['lluvioso', 'soleado', 'nublado'],
+    temperaturas : ['0º','+10º', '+20º', '+30º']
+}
+
+const viaje = {...caminosASantiago, ...clima}
+console.log(viaje)
+
+// ARRAY TRANSFORMATION
+
