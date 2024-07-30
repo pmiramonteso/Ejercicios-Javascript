@@ -154,3 +154,35 @@ console.log(viaje)
 
 // ARRAY TRANSFORMATION
 
+const acuadrar = [1, 2, 3, 4]
+const cuadrados = acuadrar.map(x => x * x)
+console.log(cuadrados)
+
+const numbers = [1, 2, 3, 4]
+const numPairs = numbers.filter(x => x % 2 === 0)
+console.log(numPairs)
+
+const array1 = [1, 10 , 8, 11]
+const mayor10 = array1.find(x => x > 10);
+console.log(mayor10)
+
+const array2 = [13, 7, 8, 21]
+const valorInicial = 0;
+const reduce = array2.reduce((accumulator, valorActual) => accumulator + valorActual, valorInicial,);
+console.log(reduce);
+
+const array3 = [1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9]
+function calcular() {
+let filter = array3.filter (x => x >= 10)
+let multi = filter.map(x => x*2)
+let sumo = multi.reduce((accumulator, valorActual) => accumulator + valorActual)
+return sumo
+}
+console.log(calcular())
+
+const array4 = [11, 12, 13, 14]
+const someWhere = array4.some(x => x > 10);
+console.log(someWhere)
+const everyOne = array4.every(x => x > 10);
+console.log(everyOne)
+
