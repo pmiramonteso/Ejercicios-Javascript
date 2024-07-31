@@ -74,10 +74,12 @@ function procesar(num, callback){
 console.log(procesar(5, (num) => num * num));
 
 console.log('--- Ejercicio 2 ---');
-function suma(a, b, callback) {
-    callback(a + b);
+function calculadora(num1, num2, callback) {
+    callback(num1, num2);
 }
-suma(4, 6, (resultado) => console.log(resultado));
+calculadora(4, 6, (a, b) => {
+    console.log(a + b);
+});
 
 console.log('--- Ejercicio 3 ---');
 function aSaludar(nombre, callback) {
