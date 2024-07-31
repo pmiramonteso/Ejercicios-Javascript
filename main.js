@@ -248,7 +248,6 @@ let numeros = [1, 2, 3, 4, 5, 6]
 
  console.log('--- Promesas & Async/Await ---');
 
- console.log('--- Ejercicio 1 ---');
 //'--- Ejercicio 1, 2, 4 y 5---'
  let promesa = new Promise((resolve, reject) => {
        setTimeout(() => {
@@ -276,7 +275,7 @@ let numeros = [1, 2, 3, 4, 5, 6]
   }
   imprimirResultado();
   
-  console.log('--- Ejercicio 3 ---');
+  //'--- Ejercicio 3 ---'
   function saludar(input) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -304,7 +303,7 @@ let numeros = [1, 2, 3, 4, 5, 6]
 }
 manejarSaludo()
   
-  console.log('--- Ejercicio 6 ---');
+//'--- Ejercicio 6 ---'
   let promesa1 = new Promise((resolve) => {
     setTimeout(() => {
       resolve("Resolviendo promesa1");
