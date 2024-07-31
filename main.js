@@ -186,3 +186,32 @@ console.log(someWhere)
 const everyOne = array4.every(x => x > 10);
 console.log(everyOne)
 
+//ARRAY LOOPS
+let nombres = ['Anna', 'Bernat', 'Clara'];
+nombres.forEach((x) => console.log(x))
+
+for (const valor of nombres) {
+    console.log(valor)
+}
+
+let obj = {
+    Nombre: 'Ola',
+    Edad: 25,
+    Ciudad: 'Barcelona'
+};
+
+for (const clave in obj) {
+    console.log(`${clave}: ${obj[clave]}`)
+}
+
+let numeros = [1, 2, 3, 4, 5, 6]
+ for (let numero of numeros) {
+    if (numero > 5) {
+        break;
+    }
+    console.log(numero)
+ }
+
+ for (let [indice, valor] of nombres.entries()) {
+    console.log(`Indice: ${indice}, Nombre: ${valor}`);
+ }
