@@ -19,8 +19,8 @@ index.html: Enlaza los archivos JavaScript script.js y class.js.
 
 Clona el Repositorio
 
-git clone <URL_DEL_REPOSITORIO>
-cd <NOMBRE_DEL_REPOSITORIO>
+git clone <https://github.com/pmiramonteso/Sprint-2.1.git>
+cd <Sprint-2.1>
 
 Abre el Archivo HTML
 
