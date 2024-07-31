@@ -152,7 +152,7 @@ const clima = {
 const viaje = {...caminosASantiago, ...clima}
 console.log(viaje)
 
-// ARRAY TRANSFORMATION
+//Array transformations
 
 const acuadrar = [1, 2, 3, 4]
 const cuadrados = acuadrar.map(x => x * x)
@@ -186,7 +186,7 @@ console.log(someWhere)
 const everyOne = array4.every(x => x > 10);
 console.log(everyOne)
 
-//ARRAY LOOPS
+//Array Loops
 let nombres = ['Anna', 'Bernat', 'Clara'];
 nombres.forEach((x) => console.log(x))
 
@@ -215,3 +215,67 @@ let numeros = [1, 2, 3, 4, 5, 6]
  for (let [indice, valor] of nombres.entries()) {
     console.log(`Indice: ${indice}, Nombre: ${valor}`);
  }
+
+ //Promesas & Async/Await
+ let promesa = new Promise((resolve, reject) => {
+       setTimeout(() => {
+      let compromiso = true;
+      if (compromiso) {
+        resolve("Hola, Mundo");
+      } else {
+        reject("Ouch, no has podido realizar tu promesa :(");
+      }
+    }, 2000);
+  });
+  
+  promesa.then((mensaje) => {
+    console.log(mensaje);
+  }).catch((error) => {
+    console.error(error);
+  });
+  async function imprimirResultado() {
+    try {
+      const mensaje = await promesa;
+      console.log(mensaje);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  imprimirResultado();
+  
+  function saludar(input) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (input === 'Hola') {
+          resolve("Hola, mundo");
+        } else {
+          reject("No es correcto");
+        }
+      }, 2000);
+    });
+  }
+  saludar('Hola').then((mensaje1) => {
+    console.log(mensaje1);
+  }).catch((error1) => {
+    console.error(error1);
+  });
+  
+  let promesa1 = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Resolviendo promesa1");
+    }, 2000);
+  });
+  
+  let promesa2 = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Resolviendo promesa2");
+    }, 3000);
+  });
+  
+  Promise.all([promesa1, promesa2])
+    .then((resultados) => {
+      console.log(resultados);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
