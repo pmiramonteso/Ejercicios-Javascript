@@ -25,9 +25,9 @@ const printNumbers = (nums) => {
 }
 printNumbers([4, 9, 13, 22])
 
-console.log('--- Ejercicio 5 ---');
+//'--- Ejercicio 5 ---'
 setTimeout(() => {
-    console.log('El rap es rápido');
+    console.log('Ejercicio 1.5: ', 'El rap es rápido');
 }, 4000);
 
 console.log('--- Operador ternario ---');
@@ -81,13 +81,13 @@ calculadora(4, 6, (a, b) => {
     console.log(a + b);
 });
 
-console.log('--- Ejercicio 3 ---');
+//'--- Ejercicio 3 ---'
 function aSaludar(nombre, callback) {
     callback(nombre);
 }
 setTimeout(() => {
     aSaludar('Paola', (nombre) => {
-        console.log('Hola, ' + nombre);
+        console.log('Ejercicio 3.3','Hola, ' + nombre);
     });
 }, 2000);
 
@@ -248,7 +248,8 @@ let numeros = [1, 2, 3, 4, 5, 6]
 
  console.log('--- Promesas & Async/Await ---');
 
- console.log('--- Ejercicio 1, 2, 4 y 5---');
+ console.log('--- Ejercicio 1 ---');
+//'--- Ejercicio 1, 2, 4 y 5---'
  let promesa = new Promise((resolve, reject) => {
        setTimeout(() => {
       let compromiso = true;
@@ -261,14 +262,14 @@ let numeros = [1, 2, 3, 4, 5, 6]
   });
   
   promesa.then((mensaje) => {
-    console.log(mensaje);
+    console.log('Ejercicio 7.2:' + mensaje);
   }).catch((error) => {
     console.error(error);
   });
   async function imprimirResultado() {
     try {
       const mensaje = await promesa;
-      console.log(mensaje);
+      console.log('Ejercicio 7.4:' + mensaje);
     } catch (error) {
       console.error(error);
     }
@@ -288,10 +289,20 @@ let numeros = [1, 2, 3, 4, 5, 6]
     });
   }
   saludar('Hola').then((mensaje1) => {
-    console.log(mensaje1);
+    console.log('Ejercicio 7.3:' + mensaje1);
   }).catch((error1) => {
     console.error(error1);
   });
+
+  async function manejarSaludo() {
+    try {
+        const mensaje1 = await saludar('Hola');
+        console.log('Ejercicio 7.5: ' + mensaje1);
+    } catch (error1) {
+        console.error(error1);
+    }
+}
+manejarSaludo()
   
   console.log('--- Ejercicio 6 ---');
   let promesa1 = new Promise((resolve) => {
